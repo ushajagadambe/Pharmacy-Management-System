@@ -1,0 +1,4 @@
+
+This is Web application with MVC flow which providing services to customer and 
+shopkeeper like placing order of medicine, how many medicines are available 
+in stock. 
