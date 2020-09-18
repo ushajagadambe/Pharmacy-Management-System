@@ -17,8 +17,6 @@ import com.itm.VO.AdminLoginVO;
 @WebServlet("/AdminLoginController")
 public class AdminLoginController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-
-	
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		System.out.println("Controller class");
 		AdminLoginDelegate adminlogindelegate=null;
@@ -40,7 +38,7 @@ public class AdminLoginController extends HttpServlet {
 			else
 			{ 
 			printwriter.print("Login unsuceessfull may be user name or password is wrong");
-			printwriter.print("<html><body><br><a href=Adminlogin.html>try again</a></</body></html>");
+			printwriter.print("<html><body><br><a href=\"Adminlogin.html\">try again</a></</body></html>");
 			}
 		} catch (Exception e) {
 		

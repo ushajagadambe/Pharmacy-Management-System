@@ -13,23 +13,23 @@ public class CustomerRegDAO {
 	
 public boolean InsertCustomer(CustomerRegBO bo) throws Exception
 { String username=null;String password=null;String address=null;long phone;boolean res=false;
+System.out.println("welcome to dao");
    username=bo.getName();
    password=bo.getPassword();
    address=bo.getAddress();
-   address=bo.getAddress();
    phone=bo.getPhone();
-   phone=bo.getPhone();
-	Connection con=connection.getConnection();
-	PreparedStatement ps=con.prepareStatement("query");
-	ps.setString(0,username);
-	ps.setString(1, password);
-	ps.setString(2, address);
-	ps.setLong(3, phone);
+   Connection con=connection.getConnection();
+	PreparedStatement ps=con.prepareStatement(query);
+	ps.setString(1,username);
+	ps.setString(2, password);
+	ps.setString(3, address);
+	ps.setLong(4, phone);
 	int n=ps.executeUpdate();
 	if(n==0)
 		res=false;
 	else
 		res=true;
+	System.out.println(res+"dao");
 	return res;
 	
 }

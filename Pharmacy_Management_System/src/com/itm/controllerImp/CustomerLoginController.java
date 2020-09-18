@@ -7,6 +7,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -38,7 +39,8 @@ public class CustomerLoginController extends HttpServlet {
 		result=customerlogindelegate.Handle(customerloginvo);
 		if(result==true)
 		{
-		printwriter.print("successfull");
+			RequestDispatcher rd=request.getRequestDispatcher("CustomerMenu.html");
+			rd.include(request,response);
 			
 		}		
 		
