@@ -1,0 +1,5 @@
+create table Admin(username varchar2(20),password varchar2(20));
+create table Medicine(medname vrachar2(20),mdate date,edate date,power number(20));
+create table customer(name varchar2(20),password varchar2(20),address varchar2(20),phoneno long);
+create table order_customer(name varchar2(20),medname varchar2(20),power number(6));
+
